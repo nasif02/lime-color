@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="ch_appx_"></color>
+
+    <color name="ch_appx_viridian">#447F70</color>
+    <color name="ch_appx_aqua_forest">#65A380</color>
+    <color name="ch_appx_persian_green">#00A388</color>
+
+
+
+    <color name="ch_appx_bittersweet">#FF6F69</color>
+    <color name="ch_appx_bittersweet_2">#FE6F61</color>
+    <color name="ch_appx_valencia">#DB473B</color>
+    <color name="ch_appx_froly">#F67280</color>
+
+
+    <color name="ch_appx_regent_gray">#788A9E</color>
+    <color name="ch_appx_eunry">#D5ADA6</color>
+    <color name="ch_appx_viola">#CA96A8</color>
+    <color name="ch_appx_sand_dune">#7D6B68</color>
+
+
+</resources>

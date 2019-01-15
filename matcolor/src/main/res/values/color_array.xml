@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="mdcolor_400">
+    <array name="carr_mdcolor_400">
         <item name="red_400" type="color">#e84e40</item>
         <item name="pink_400" type="color">#ec407a</item>
         <item name="purple_400" type="color">#ab47bc</item>
@@ -20,7 +20,9 @@
         <item name="grey_400" type="color">#bdbdbd</item>
         <item name="blue_grey_400" type="color">#78909c</item>
     </array>
-    <array name="mdcolor_500">
+
+
+    <array name="carr_mdcolor_500">
         <item name="red_500" type="color">#e51c23</item>
         <item name="pink_500" type="color">#e91e63</item>
         <item name="purple_500" type="color">#9c27b0</item>
