@@ -28,7 +28,7 @@ public class ColorUtils {
      * @param resIdColor
      * @return
      */
-    private int getMaterialColor(int resIdColor) {
+    public static int getMaterialColor(int resIdColor) {
         int returnColor = context.getResources().getColor(resIdColor);
         return returnColor;
     }
@@ -38,7 +38,7 @@ public class ColorUtils {
      * @param resIdColorArray
      * @return
      */
-    private int getMaterialColorRandom(int resIdColorArray) {
+    public static int getMaterialColorRandom(int resIdColorArray) {
         int returnColor = Color.GRAY;
         TypedArray colors = context.getResources().obtainTypedArray(resIdColorArray);
         int index = (int) (Math.random() * colors.length());
@@ -53,7 +53,7 @@ public class ColorUtils {
      * @param resIdColorArray
      * @return
      */
-    private List<Integer> getMaterialColorList(int resIdColorArray) {
+    public static List<Integer> getMaterialColorList(int resIdColorArray) {
         TypedArray colors = context.getResources().obtainTypedArray(resIdColorArray);
         List<Integer> items = new ArrayList<>();
         for (int i = 0; i < colors.length(); i++) {
