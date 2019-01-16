@@ -23,11 +23,21 @@ public class ColorUtils {
     private static final Context context = Contextor.getInstance().getContext();
 
 
+    /**
+     *
+     * @param resIdColor
+     * @return
+     */
     private int getMaterialColor(int resIdColor) {
         int returnColor = context.getResources().getColor(resIdColor);
         return returnColor;
     }
 
+    /**
+     *
+     * @param resIdColorArray
+     * @return
+     */
     private int getMaterialColorRandom(int resIdColorArray) {
         int returnColor = Color.GRAY;
         TypedArray colors = context.getResources().obtainTypedArray(resIdColorArray);
@@ -38,6 +48,11 @@ public class ColorUtils {
     }
 
 
+    /**
+     *
+     * @param resIdColorArray
+     * @return
+     */
     private List<Integer> getMaterialColorList(int resIdColorArray) {
         TypedArray colors = context.getResources().obtainTypedArray(resIdColorArray);
         List<Integer> items = new ArrayList<>();
