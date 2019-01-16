@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Fully transparent, equivalent to 0x00000000 -->
+    <color name="transparent">#00000000</color>
+
     <!-- Common -->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
