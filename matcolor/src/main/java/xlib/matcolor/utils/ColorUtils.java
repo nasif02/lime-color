@@ -1,4 +1,4 @@
-package matcolor.utils;
+package xlib.matcolor.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,7 +7,7 @@ import android.graphics.Color;
 import java.util.ArrayList;
 import java.util.List;
 
-import matcolor.base.Contextor;
+import xlib.matcolor.base.Contextor;
 
 /**
  * Copyright 2019 (C) Xplo
@@ -15,7 +15,7 @@ import matcolor.base.Contextor;
  * Created  : 1/16/2019
  * Author   : Xplo
  * Version  : 1.0
- * Desc     : matcolor.utils
+ * Desc     : xlib.matcolor.utils
  * Comment  :
  */
 public class ColorUtils {
