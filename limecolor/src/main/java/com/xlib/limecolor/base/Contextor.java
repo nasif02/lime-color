@@ -1,4 +1,4 @@
-package xlib.matcolor.base;
+package com.xlib.limecolor.base;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,15 +9,15 @@ import android.content.Context;
  * Created  : 10/23/2018
  * Author   : Xplo
  * Version  : 1.0
- * Desc     : alime.utils
- * Comment  :       Contextor.getInstance().init(appContext);
+ * Desc     :
+ * Comment  : Contextor.getInstance().init(appContext);
  */
 public class Contextor {
 
     @SuppressLint("StaticFieldLeak")
     private static Contextor sInstance;
 
-    private Context mContext;
+    private Context context;
 
     public static Contextor getInstance() {
         if (sInstance == null) {
@@ -27,10 +27,10 @@ public class Contextor {
     }
 
     public void init(Context context) {
-        mContext = context;
+        this.context = context;
     }
 
     public Context getContext() {
-        return mContext;
+        return context;
     }
 }

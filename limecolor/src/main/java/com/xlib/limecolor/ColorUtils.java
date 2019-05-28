@@ -1,13 +1,14 @@
-package xlib.matcolor.utils;
+package com.xlib.limecolor;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 
+import com.xlib.limecolor.base.Contextor;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import xlib.matcolor.base.Contextor;
 
 /**
  * Copyright 2019 (C) Xplo
@@ -15,30 +16,30 @@ import xlib.matcolor.base.Contextor;
  * Created  : 1/16/2019
  * Author   : Xplo
  * Version  : 1.0
- * Desc     : xlib.matcolor.utils
+ * Desc     : matcolor.utils
  * Comment  :
  */
 public class ColorUtils {
 
+    @SuppressLint("StaticFieldLeak")
     private static final Context context = Contextor.getInstance().getContext();
 
 
     /**
-     *
+     * Get a color from color resource
      * @param resIdColor
      * @return
      */
-    public static int getMaterialColor(int resIdColor) {
-        int returnColor = context.getResources().getColor(resIdColor);
-        return returnColor;
+    public static int getColor(int resIdColor) {
+        return context.getResources().getColor(resIdColor);
     }
 
     /**
-     *
+     * Get a random color from color resource array
      * @param resIdColorArray
      * @return
      */
-    public static int getMaterialColorRandom(int resIdColorArray) {
+    public static int getRandomColor(int resIdColorArray) {
         int returnColor = Color.GRAY;
         TypedArray colors = context.getResources().obtainTypedArray(resIdColorArray);
         int index = (int) (Math.random() * colors.length());
@@ -49,11 +50,11 @@ public class ColorUtils {
 
 
     /**
-     *
+     * Get color list form color resource array
      * @param resIdColorArray
      * @return
      */
-    public static List<Integer> getMaterialColorList(int resIdColorArray) {
+    public static List<Integer> getColorList(int resIdColorArray) {
         TypedArray colors = context.getResources().obtainTypedArray(resIdColorArray);
         List<Integer> items = new ArrayList<>();
         for (int i = 0; i < colors.length(); i++) {
@@ -67,6 +68,7 @@ public class ColorUtils {
 
     /**
      * Chooses random color defined in res/array.xml
+     * need to check if its work or not
      */
     private int getRandomMaterialColor() {
         int returnColor = Color.GRAY;

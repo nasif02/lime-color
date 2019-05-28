@@ -1,4 +1,4 @@
-package com.xlib.matcolor;
+package com.xlib.limecolor;
 
 import org.junit.Test;
 
