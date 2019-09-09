@@ -1,11 +1,8 @@
 package com.xlib.limecolor;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-
-import com.xlib.limecolor.base.Contextor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,25 +18,14 @@ import java.util.List;
  */
 public class ColorUtils {
 
-    @SuppressLint("StaticFieldLeak")
-    private static final Context context = Contextor.getInstance().getContext();
 
-
-    /**
-     * Get a color from color resource
-     * @param resIdColor
-     * @return
-     */
-    public static int getColor(int resIdColor) {
-        return context.getResources().getColor(resIdColor);
-    }
 
     /**
      * Get a random color from color resource array
      * @param resIdColorArray
      * @return
      */
-    public static int getRandomColor(int resIdColorArray) {
+    public static int getRandomColor(Context context,int resIdColorArray) {
         int returnColor = Color.GRAY;
         TypedArray colors = context.getResources().obtainTypedArray(resIdColorArray);
         int index = (int) (Math.random() * colors.length());
@@ -54,7 +40,7 @@ public class ColorUtils {
      * @param resIdColorArray
      * @return
      */
-    public static List<Integer> getColorList(int resIdColorArray) {
+    public static List<Integer> getColorList(Context context,int resIdColorArray) {
         TypedArray colors = context.getResources().obtainTypedArray(resIdColorArray);
         List<Integer> items = new ArrayList<>();
         for (int i = 0; i < colors.length(); i++) {
@@ -70,7 +56,7 @@ public class ColorUtils {
      * Chooses random color defined in res/array.xml
      * need to check if its work or not
      */
-    private int getRandomMaterialColor() {
+    private int getRandomMaterialColor(Context context) {
         int returnColor = Color.GRAY;
         //int arrayId = context.getResources().getIdentifier("mdcolor_" + typeColor, "array", context.getPackageName());
         int arrayId = context.getResources().getIdentifier("mdcolor_400", "array", context.getPackageName());
