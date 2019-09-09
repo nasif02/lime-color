@@ -40,11 +40,14 @@ class ColorUtils {
     companion object {
 
 
+
         /**
          * Get a random color from color resource array
+         * @param context
          * @param resIdColorArray
          * @return
          */
+
         fun getRandomColor(context: Context, resIdColorArray: Int): Int {
             var returnColor = Color.GRAY
             val colors = context.resources.obtainTypedArray(resIdColorArray)
@@ -57,6 +60,7 @@ class ColorUtils {
 
         /**
          * Get color list form color resource array
+         * @param context
          * @param resIdColorArray
          * @return
          */
