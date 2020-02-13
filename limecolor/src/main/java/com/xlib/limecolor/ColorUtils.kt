@@ -18,6 +18,46 @@ import java.util.ArrayList
  */
 class ColorUtils {
 
+    companion object {
+
+
+
+        /**
+         * Get a random color from color resource array
+         * @param context
+         * @param resIdColorArray
+         * @return
+         */
+        @JvmStatic
+        fun getRandomColor(context: Context, resIdColorArray: Int): Int {
+            var returnColor = Color.GRAY
+            val colors = context.resources.obtainTypedArray(resIdColorArray)
+            val index = (Math.random() * colors.length()).toInt()
+            returnColor = colors.getColor(index, Color.GRAY)
+            colors.recycle()
+            return returnColor
+        }
+
+
+        /**
+         * Get color list form color resource array
+         * @param context
+         * @param resIdColorArray
+         * @return
+         */
+        @JvmStatic
+        fun getColorList(context: Context, resIdColorArray: Int): List<Int> {
+            val colors = context.resources.obtainTypedArray(resIdColorArray)
+            val items = ArrayList<Int>()
+            for (i in 0 until colors.length()) {
+                items.add(colors.getColor(i, Color.GRAY))
+            }
+            colors.recycle()
+
+            return items
+        }
+    }
+
 
     /**
      * Chooses random color defined in res/array.xml
@@ -37,44 +77,6 @@ class ColorUtils {
         return returnColor
     }
 
-    companion object {
-
-
-
-        /**
-         * Get a random color from color resource array
-         * @param context
-         * @param resIdColorArray
-         * @return
-         */
-
-        fun getRandomColor(context: Context, resIdColorArray: Int): Int {
-            var returnColor = Color.GRAY
-            val colors = context.resources.obtainTypedArray(resIdColorArray)
-            val index = (Math.random() * colors.length()).toInt()
-            returnColor = colors.getColor(index, Color.GRAY)
-            colors.recycle()
-            return returnColor
-        }
-
-
-        /**
-         * Get color list form color resource array
-         * @param context
-         * @param resIdColorArray
-         * @return
-         */
-        fun getColorList(context: Context, resIdColorArray: Int): List<Int> {
-            val colors = context.resources.obtainTypedArray(resIdColorArray)
-            val items = ArrayList<Int>()
-            for (i in 0 until colors.length()) {
-                items.add(colors.getColor(i, Color.GRAY))
-            }
-            colors.recycle()
-
-            return items
-        }
-    }
 
 
 }
